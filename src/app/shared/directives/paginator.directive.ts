@@ -16,8 +16,6 @@ import {MatLegacyTableDataSource as MatTableDataSource} from '@angular/material/
 import {CONST} from '../../core/utils/constant';
 import {ConfigLoader} from '../../core/utils/framework/config-loader.service';
 import {distinctUntilChanged, skip, switchMap} from 'rxjs/operators';
-import { DataSource } from '@angular/cdk/collections';
-import { map } from 'lodash';
 
 /**
  * Extends MatPaginators functionalities by providing persistent state through URL params
