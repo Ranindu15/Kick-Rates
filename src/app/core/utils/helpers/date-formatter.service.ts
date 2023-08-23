@@ -15,22 +15,6 @@ export class DateFormatter {
   }
 
   /**
-   * Get today date
-   * please use this instead of javascript new Date()
-   * @param setTimeToZero
-   */
-  public getToday(setTimeToZero?: boolean): Date {
-    const today = moment().toDate();
-    if (setTimeToZero) {
-      today.setHours(0);
-      today.setMinutes(0);
-      today.setSeconds(0);
-      today.setMilliseconds(0);
-    }
-    return today;
-  }
-
-  /**
    * Return Date object by date string
    * @param date (2021-05-18)
    */
