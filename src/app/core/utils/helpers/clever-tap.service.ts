@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { DataKey, DataStore } from '../framework/data-store.service';
-import clevertap from 'clevertap-web-sdk';
+import * as clevertap from 'clevertap-web-sdk';
 import { Subscription } from 'rxjs';
 import { CommonMerchantEvent } from '../../models/events/common-merchant';
 import { ConfigLoader } from '../framework/config-loader.service';
@@ -40,7 +40,6 @@ export class CleverTapService {
     if (isEnableCleverTap) {
       clevertap.privacy.push({optOut: false});
       clevertap.privacy.push({useIP: false});
-      clevertap.spa = true;
       clevertap.init(CLEVERTAP_ACC_ID);
       this.getUserConfigDetails();
     }

@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import moment from 'moment';
-import { BusinessHours } from '../../models/api/responses/business-hours';
+import * as moment from 'moment';
 import { CONST } from '../constant';
 
 @Injectable()

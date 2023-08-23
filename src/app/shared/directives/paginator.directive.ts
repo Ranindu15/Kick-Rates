@@ -16,6 +16,8 @@ import {MatLegacyTableDataSource as MatTableDataSource} from '@angular/material/
 import {CONST} from '../../core/utils/constant';
 import {ConfigLoader} from '../../core/utils/framework/config-loader.service';
 import {distinctUntilChanged, skip, switchMap} from 'rxjs/operators';
+import { DataSource } from '@angular/cdk/collections';
+import { map } from 'lodash';
 
 /**
  * Extends MatPaginators functionalities by providing persistent state through URL params
@@ -37,14 +39,14 @@ import {distinctUntilChanged, skip, switchMap} from 'rxjs/operators';
 })
 export class PaginatorDirective implements OnInit, OnChanges {
   @Output() pageStateChanged = new EventEmitter<PageEvent>();
-  @Input() pageIndex: number;
-  @Input() pageSize: number;
-  @Input() length: number;
-  @Input() pageSizeOptions: number[];
-  @Input() dataSource: MatTableDataSource<any>;
-  @Input() pageIndexParamString: string
-  @Input() pageSizeParamString: string
-  @Input() disablePersistence: boolean
+  @Input() pageIndex: number = 0;
+  @Input() pageSize: number = 10;
+  @Input() length: number = 10;
+  @Input() pageSizeOptions: number[] = [];
+  @Input() dataSource: MatTableDataSource<any> = new MatTableDataSource()
+  @Input() pageIndexParamString: string = 'rt'
+  @Input() pageSizeParamString: string = ''
+  @Input() disablePersistence: boolean = false
 
   @HostBinding('class.hidden')
   private get isHidden(): boolean {

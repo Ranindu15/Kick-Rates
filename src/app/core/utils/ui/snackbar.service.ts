@@ -30,6 +30,12 @@ export class SnackbarData {
   title: string;
   message: string;
   duration: number;
+  constructor() {
+    this.title = 'ds'
+    this.type = ALERT_TYPE.SUCCESS
+    this.message = 'dtysd'
+    this.duration = 4000
+  }
 }
 
 export enum ALERT_TYPE {
@@ -42,4 +48,8 @@ export enum ALERT_TYPE {
 export class SnackBarStates {
   show: boolean;
   data: SnackbarData;
+  constructor() {
+    this.show = false
+    this.data = new SnackbarData()
+  }
 }

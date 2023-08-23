@@ -8,5 +8,8 @@ export class AwardFeedbackDiscountEvent  extends CommonMerchantEvent{
   constructor() {
     super();
     this.event_name = 'award_feedback_discount';
+    this.passenger_id = 10
+    this.order_id = 23
+    this.discount_amount = 11
   }
 }

@@ -12,7 +12,7 @@ import { ModalData } from '../../../core/utils/ui/modal.service';
 export class RightBottomSheetComponent implements OnInit {
 
   @ViewChild('dynamic', { read: ViewContainerRef, static: true })
-  viewContainerRef: ViewContainerRef;
+  viewContainerRef: ViewContainerRef | undefined;
 
   constructor(
     private dynamicRenderer: DynamicRenderer,

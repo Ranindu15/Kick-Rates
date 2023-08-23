@@ -1,6 +1,10 @@
 export class BusinessHours {
   day: string;
   business_hours: BusinessHour[];
+  constructor() {
+    this.day = 'mon'
+    this.business_hours = []
+  }
 }
 
 export class BusinessHour {

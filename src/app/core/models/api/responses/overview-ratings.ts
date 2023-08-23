@@ -1,27 +1,20 @@
-export class OverviewRatings {
-  grading_image: string;
-  grading_name: string;
-  grading_sub_heading: string;
-  grading_text: string;
-  negative_rating_percentage: number;
-  positive_rating_percentage: number;
-  tag_ratings: TagRating[];
-  total_ratings: number;
-}
-
-export class TagRating {
-  rating_percentage: number;
-  tag_name: string;
-  tag_sign: string;
-}
 
 export class ItemRating {
   total_count: number;
   comments: MenuItemComment[];
+  constructor() {
+    this.total_count = 34
+    this.comments = []
+  }
 }
 
 export class MenuItemComment {
   comment: string;
   rated_timestamp: string;
   rating: number;
+  constructor() {
+    this.comment = 'dsjgd'
+    this.rated_timestamp = '63-3792'
+    this.rating = 34
+  }
 }

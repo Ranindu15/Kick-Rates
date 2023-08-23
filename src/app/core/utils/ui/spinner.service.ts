@@ -19,5 +19,8 @@ export class Spinner {
 
 export class SpinnerState {
   show: boolean;
+  constructor() {
+    this.show = false
+  }
 }
 

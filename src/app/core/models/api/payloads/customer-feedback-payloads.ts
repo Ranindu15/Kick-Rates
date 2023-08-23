@@ -14,6 +14,13 @@ export class CustomerReply {
   customer_feedback: string;
   reply_text: string;
   discount: Discount | null;
+  constructor() {
+    this.job_id = 10
+    this.merchant_id = 11
+    this.customer_feedback = 'dsd'
+    this.reply_text = 'ds'
+    this.discount = new Discount()
+  }
 }
 
 export class Discount {
@@ -21,6 +28,12 @@ export class Discount {
   amount: number;
   expiry_date: string;
   currency_code: string;
+  constructor() {
+    this.outlet_name = 'kakao'
+    this.amount = 1000
+    this.expiry_date = '2022-10-11'
+    this.currency_code = 'LKR'
+  }
 }
 
 export class SelectedPassengers {

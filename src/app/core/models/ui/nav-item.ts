@@ -6,4 +6,13 @@ export class NavItem {
   url: string;
   target: string;
   clevertapEvent: string;
+  constructor() {
+    this.id = ''
+    this.title = ''
+    this.hide = false
+    this.restrictKey = ''
+    this.url = ''
+    this.target = ''
+    this.clevertapEvent = ''
+  }
 }

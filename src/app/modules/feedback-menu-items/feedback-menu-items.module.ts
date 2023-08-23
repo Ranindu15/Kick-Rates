@@ -23,7 +23,6 @@ import { ModalService } from '../../core/utils/ui/modal.service';
 import { MAT_BOTTOM_SHEET_DATA, MatBottomSheet } from '@angular/material/bottom-sheet';
 import { DynamicRenderer } from '../../core/utils/ui/dynamic-renderer.service';
 import { MatLegacyListModule as MatListModule } from '@angular/material/legacy-list';
-import { DocumentGenerateService } from '../../core/services/document-generate.service';
 import {
   CustomerFeedbackOrderDetailsComponent
 } from '../../shared/components/customer-feedback-order-details/customer-feedback-order-details.component';
@@ -59,7 +58,6 @@ const materialModules = [
   providers: [
     DateFormatter,
     HttpParams,
-    DocumentGenerateService,
     FeedbackServiceHandler,
     ModalService,
     DynamicRenderer,

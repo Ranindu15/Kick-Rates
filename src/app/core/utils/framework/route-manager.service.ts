@@ -9,7 +9,6 @@ import { Menu, MenuType } from '../../models/ui/menu';
 import { CommonHelper } from '../helpers/common-helper.service';
 import { DataKey, DataStore } from './data-store.service';
 import { CleverTapService } from '../helpers/clever-tap.service';
-import clevertap from 'clevertap-web-sdk';
 import { CookieService } from 'ngx-cookie-service';
 
 
@@ -20,7 +19,7 @@ export class RouteManager {
   public activeSubMenu: BehaviorSubject<any> = new BehaviorSubject(null);
   public mainMenusChange: BehaviorSubject<any> = new BehaviorSubject(null);
   public iconMenusChange: BehaviorSubject<any> = new BehaviorSubject(null);
-  public activeNavigationKey: string;
+  public activeNavigationKey: string = '';
   public mainMenus: Menu[] = [];
   public iconMenus: Menu[] = [];
   public menus: Menu[] = [];
@@ -51,7 +50,7 @@ export class RouteManager {
     const navItem: NavItem = this.configLoader.configurations.get(CONST.APP_CONFIG.NAVIGATION_CONFIG)[key];
     // load all existing params
     const params = this.activatedRoute.snapshot.queryParams;
-    let tmpParams = {};
+    let tmpParams: any = {};
     for (const key in params) {
       if (params.hasOwnProperty(key)) {
         tmpParams[key] = params[key];
@@ -241,7 +240,7 @@ export class RouteManager {
   public addParamsToUrl(qParams: Map<string, any>) {
     // load all existing params
     const params = this.activatedRoute.snapshot.queryParams;
-    const tmpParams = {};
+    const tmpParams: any = {};
     for (const key in params) {
       if (params.hasOwnProperty(key)) {
         tmpParams[key] = params[key];

@@ -1,14 +1,11 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import {
   ActivatedRoute,
-  NavigationEnd,
   Router,
-  RoutesRecognized
 } from '@angular/router';
 import { RouteManager } from './core/utils/framework/route-manager.service';
 import { Menu } from './core/models/ui/menu';
 import { CookieService } from 'ngx-cookie-service';
-import { CONST } from './core/utils/constant';
 import { Subscription } from 'rxjs';
 import { Snackbar, SnackBarStates } from './core/utils/ui/snackbar.service';
 import { MatLegacySnackBar as MatSnackBar } from '@angular/material/legacy-snack-bar';
@@ -17,7 +14,7 @@ import { NavItem } from './core/models/ui/nav-item';
 import { UserServiceHandler } from './core/services/service-handlers/user-service-handler';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ConfigLoader } from './core/utils/framework/config-loader.service';
-import { DataKey, DataStore } from './core/utils/framework/data-store.service';
+import { DataStore } from './core/utils/framework/data-store.service';
 import { Spinner, SpinnerState } from './core/utils/ui/spinner.service';
 import { HttpClient } from '@angular/common/http';
 

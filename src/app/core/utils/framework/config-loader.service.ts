@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 export class ConfigLoader {
   public static APP_CONFIG = 'APP_CONFIG';
   public configurations: Map<string, any> = new Map();
-  public endpointId: string;
+  public endpointId: string = '';
 
   constructor(private http: HttpClient) {}
 

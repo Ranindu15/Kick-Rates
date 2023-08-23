@@ -7,6 +7,16 @@ export class FeedbackDiscount {
   start_date: string;
   end_data: string;
   is_passenger_selected: boolean;
+  constructor() {
+    this.promotion_name = 'ewr3r'
+    this.promotion_id = 4323
+    this.promotion_code = 3434
+    this.promotion_discount_amount = 434
+    this.currency_code = 'LKR'
+    this.start_date = '32323'
+    this.end_data = 'r844683'
+    this.is_passenger_selected = false
+  }
 }
 
 export class NewFeedbackDiscount {

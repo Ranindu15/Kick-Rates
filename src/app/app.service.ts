@@ -10,6 +10,7 @@ export class AppService {
   ) {}
 
   public loadConfigurations() {
+    console.log(environment.base_config)
     return new Promise((resolve) => {
       this.configLoader.loadFromBaseConfig(environment.base_config)
         .then(() => {

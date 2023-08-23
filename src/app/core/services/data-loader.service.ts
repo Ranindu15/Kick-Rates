@@ -14,7 +14,7 @@ import { CleverTapService } from '../utils/helpers/clever-tap.service';
 @Injectable()
 export class DataLoaderService {
 
-  public endpointId: string;
+  public endpointId: string = '';
 
   constructor(
     private configLoader: ConfigLoader,

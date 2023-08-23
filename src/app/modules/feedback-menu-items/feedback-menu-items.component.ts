@@ -95,7 +95,7 @@ export class FeedbackMenuItemsComponent implements OnInit, OnDestroy {
 
   public mockOrderOptions: OrderOptions[] = []
 
-  public mockOrderDetails: {
+  public mockOrderDetails:any = {
     job_id: 137985144,
     passenger_firstname: "Hasara",
     merchant_rating: 1,

@@ -10,7 +10,9 @@ export class DataStore {
     for (const key in DataKey) {
       if (parseInt(key, 10) >= 0) {
         // create a new subject and store it there
+        // @ts-ignore
         if (!this.asyncData.has(DataKey[DataKey[key]])) {
+          // @ts-ignore
           this.asyncData.set(DataKey[DataKey[key]], new BehaviorSubject(null));
         }
       }
@@ -51,7 +53,9 @@ export class DataStore {
     for (const key in DataKey) {
       if (parseInt(key, 10) >= 0) {
         // create a new subject and store it there
+        // @ts-ignore
         if (!this.asyncData.has(DataKey[DataKey[key]])) {
+          // @ts-ignore
           this.asyncData.set(DataKey[DataKey[key]], new BehaviorSubject(null));
         }
       }

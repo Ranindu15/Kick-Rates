@@ -7,5 +7,7 @@ export class CommonMerchantEvent {
   constructor() {
     this.merchant_id = 0;
     this.merchant_name = '';
+    this.event_name = ''
+    this.service_group = 'esd'
   }
 }
