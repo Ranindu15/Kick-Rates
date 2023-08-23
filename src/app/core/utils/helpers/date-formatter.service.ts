@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import * as moment from 'moment';
-import { CONST } from '../constant';
 
 @Injectable()
 export class DateFormatter {
