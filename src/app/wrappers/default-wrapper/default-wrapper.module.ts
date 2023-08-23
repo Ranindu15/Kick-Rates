@@ -14,7 +14,6 @@ import { MatLegacyProgressSpinnerModule as MatProgressSpinnerModule } from '@ang
 import { AppHeaderModule } from '../../shared/components/app-header/app-header.module';
 import { DialogModule } from '../../shared/components/dialog/dialog.module';
 import { SnackBarModule } from '../../shared/components/snack-bar/snack-bar.module';
-import { AgmCoreModule } from '@agm/core';
 import { MatBottomSheetRef } from '@angular/material/bottom-sheet';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { AuthGuard } from '../../core/services/auth.guard';
@@ -34,9 +33,6 @@ import { AuthGuard } from '../../core/services/auth.guard';
     DialogModule,
     SnackBarModule,
     MatSidenavModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDMl8eO40PG5cMmG4pPLE-Ze6pcWwiDaqo'
-    })
   ],
   exports: [],
   providers: [
