@@ -3,7 +3,6 @@ import { Menu } from '../../../core/models/ui/menu';
 import { ConfigLoader } from '../../../core/utils/framework/config-loader.service';
 import { RouteManager } from '../../../core/utils/framework/route-manager.service';
 import { NavItem } from '../../../core/models/ui/nav-item';
-import * as moment from 'moment';
 import { CookieService } from 'ngx-cookie-service';
 import { CONST } from '../../../core/utils/constant';
 import { MatRightSheet } from 'mat-right-sheet';
@@ -39,7 +38,7 @@ export class AppHeaderComponent implements OnInit {
     private test: AppService) { }
 
   ngOnInit(): void {
-    this.lastUpdateTime = moment().format('hh:mm A DD/MM/YYYY');
+    this.lastUpdateTime = 'hh:mm A DD/MM/YYYY'
     // this.mainMenus = this.routerManger.mainMenus;
     // this.iconMenus = this.routerManger.iconMenus;
 
