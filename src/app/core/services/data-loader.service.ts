@@ -8,8 +8,7 @@ import { RequestOptions } from '../models/request-options';
 import { KeyValue } from '../models/ui/key-value';
 import { HeaderService } from './header-service';
 import { BaseService } from './base-service';
-import { CookieService } from 'ngx-cookie-service';
-import { CleverTapService } from '../utils/helpers/clever-tap.service';
+import { CookieService } from 'ngx-cookie-service'
 
 @Injectable()
 export class DataLoaderService {
@@ -21,8 +20,7 @@ export class DataLoaderService {
     private dataStore: DataStore,
     private headerService: HeaderService,
     private baseService: BaseService,
-    private cookieService: CookieService,
-    private cleverTapService: CleverTapService
+    private cookieService: CookieService
   ) {
   }
 
@@ -49,9 +47,9 @@ export class DataLoaderService {
           this.dataStore.set(dataKey, resultsWrapper);
         }
         // clever-tap event fire
-        if (cleverTapEvent) {
-          this.cleverTapService.onFireApiEvents( cleverTapEvent );
-        }
+        // if (cleverTapEvent) {
+        //   this.cleverTapService.onFireApiEvents( cleverTapEvent );
+        // }
       }, error => {
         // TODO - need error handling
         this.dataStore.set(dataKey, error);
@@ -84,9 +82,9 @@ export class DataLoaderService {
           this.dataStore.set(dataKey, resultsWrapper);
         }
         // clever-tap event fire
-        if (cleverTapEvent) {
-          this.cleverTapService.onFireApiEvents( cleverTapEvent );
-        }
+        // if (cleverTapEvent) {
+        //   this.cleverTapService.onFireApiEvents( cleverTapEvent );
+        // }
       }, error => {
         // TODO - need error handling
         this.dataStore.set(dataKey, error);
@@ -119,9 +117,9 @@ export class DataLoaderService {
           this.dataStore.set(dataKey, resultsWrapper);
         }
         // clever-tap event fire
-        if (cleverTapEvent) {
-          this.cleverTapService.onFireApiEvents( cleverTapEvent );
-        }
+        // if (cleverTapEvent) {
+        //   this.cleverTapService.onFireApiEvents( cleverTapEvent );
+        // }
       }, error => {
         // TODO - need error handling
         this.dataStore.set(dataKey, error);
@@ -154,9 +152,9 @@ export class DataLoaderService {
           this.dataStore.set(dataKey, resultsWrapper);
         }
         // clever-tap event fire
-        if (cleverTapEvent) {
-          this.cleverTapService.onFireApiEvents( cleverTapEvent );
-        }
+        // if (cleverTapEvent) {
+        //   this.cleverTapService.onFireApiEvents( cleverTapEvent );
+        // }
       }, error => {
         // TODO - need error handling
         this.dataStore.set(dataKey, error);
@@ -188,9 +186,9 @@ export class DataLoaderService {
           this.dataStore.set(dataKey, resultsWrapper);
         }
         // clever-tap event fire
-        if (cleverTapEvent) {
-          this.cleverTapService.onFireApiEvents( cleverTapEvent );
-        }
+        // if (cleverTapEvent) {
+        //   this.cleverTapService.onFireApiEvents( cleverTapEvent );
+        // }
       }, error => {
         // TODO - need error handling
         this.dataStore.set(dataKey, error);

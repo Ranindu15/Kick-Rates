@@ -8,7 +8,6 @@ import { BehaviorSubject } from 'rxjs';
 import { Menu, MenuType } from '../../models/ui/menu';
 import { CommonHelper } from '../helpers/common-helper.service';
 import { DataKey, DataStore } from './data-store.service';
-import { CleverTapService } from '../helpers/clever-tap.service';
 import { CookieService } from 'ngx-cookie-service';
 
 
@@ -32,7 +31,6 @@ export class RouteManager {
     private queryParamService: QueryParamsService,
     private commonHelper: CommonHelper,
     private dataStore: DataStore,
-    private cleverTapService: CleverTapService,
     private cookieService: CookieService,
     ) {
     this.loadMenus();

@@ -24,7 +24,6 @@ import { DataLoaderService } from './core/services/data-loader.service';
 import { DataStore } from './core/utils/framework/data-store.service';
 import { HeaderService } from './core/services/header-service';
 import { BaseService } from './core/services/base-service';
-import { CleverTapService } from './core/utils/helpers/clever-tap.service';
 import { InvalidTokenDialogModule } from './shared/components/invalid-token-dialog/invalid-token-dialog.module';
 import { SpinnerModule } from './shared/components/spinner/spinner.module';
 
@@ -71,8 +70,7 @@ export function initialize(app: AppService) {
         DataLoaderService,
         DataStore,
         HeaderService,
-        BaseService,
-        CleverTapService
+        BaseService
     ],
     exports: [
         CommonModule
