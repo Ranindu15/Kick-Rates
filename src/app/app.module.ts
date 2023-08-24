@@ -11,12 +11,12 @@ import { RouteManager } from './core/utils/framework/route-manager.service';
 import { QueryParamsService } from './core/utils/framework/query-params.service';
 import { CommonHelper } from './core/utils/helpers/common-helper.service';
 import { CookieService } from 'ngx-cookie-service';
-import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
+import { MatButtonModule } from '@angular/material/button';
 import { Snackbar } from './core/utils/ui/snackbar.service';
-import { MatLegacySnackBarModule as MatSnackBarModule } from '@angular/material/legacy-snack-bar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ErrorInterceptor } from './core/services/error-interceptor.service';
 import { DialogService } from './core/utils/ui/dialog.service';
-import { MatLegacyDialogModule as MatDialogModule } from '@angular/material/legacy-dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { Spinner } from './core/utils/ui/spinner.service';
 import { UserServiceHandler } from './core/services/service-handlers/user-service-handler';
@@ -35,47 +35,49 @@ export function initialize(app: AppService) {
 
 @NgModule({
     declarations: [
-        AppComponent
+      AppComponent
     ],
     imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
-        BrowserAnimationsModule,
-        MatButtonModule,
-        MatSnackBarModule,
-        MatDialogModule,
-        MatIconModule,
-        InvalidTokenDialogModule,
-        SpinnerModule
+      BrowserModule,
+      AppRoutingModule,
+      HttpClientModule,
+      BrowserAnimationsModule,
+      MatButtonModule,
+      MatSnackBarModule,
+      MatDialogModule,
+      MatIconModule,
+      InvalidTokenDialogModule,
+      SpinnerModule
     ],
     providers: [
-        {
-            provide: APP_INITIALIZER,
-            useFactory: initialize,
-            deps: [AppService],
-            multi: true
-        },
-        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-        AppService,
-        ConfigLoader,
-        RouteManager,
-        QueryParamsService,
-        CommonHelper,
-        CookieService,
-        Snackbar,
-        Spinner,
-        DialogService,
-        UserServiceHandler,
-        DataLoaderService,
-        DataStore,
-        HeaderService,
-        BaseService
+      {
+        provide: APP_INITIALIZER,
+        useFactory: initialize,
+        deps: [AppService],
+        multi: true
+      },
+      {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
+      AppService,
+      ConfigLoader,
+      RouteManager,
+      QueryParamsService,
+      CommonHelper,
+      CookieService,
+      Snackbar,
+      Spinner,
+      DialogService,
+      UserServiceHandler,
+      DataLoaderService,
+      DataStore,
+      HeaderService,
+      BaseService
     ],
     exports: [
-        CommonModule
+      CommonModule
     ],
-    bootstrap: [AppComponent]
-})
+    bootstrap: [AppComponent],
+    entryComponents: [
+    ]
+  })
 export class AppModule {
 }
