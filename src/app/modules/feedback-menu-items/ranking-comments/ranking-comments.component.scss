@@ -1,7 +1,7 @@
-@import 'src/theme/styles/colors';
+@import '../../../../theme/styles/colors';
 
-
-.ranking-con, .comment-con {
+.ranking-con,
+.comment-con {
   display: flex;
   flex-direction: column;
 }
@@ -10,7 +10,7 @@
   height: 48px;
   width: 48px;
 }
-.flex-column{
+.flex-column {
   display: flex;
   flex-direction: column;
 }
@@ -23,8 +23,8 @@
   width: 4px;
 }
 ::-webkit-scrollbar-thumb {
- background: $black50;
- border-radius: 8px;
+  background: $black50;
+  border-radius: 8px;
 }
 .btn-round {
   height: 48px;
@@ -56,5 +56,5 @@ hr {
   height: 560px;
   overflow: scroll;
   position: relative;
-  max-height: inherit
+  max-height: inherit;
 }
