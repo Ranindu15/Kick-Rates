@@ -1,35 +1,140 @@
 @import 'src/theme/styles/colors';
-@import 'src/theme/styles/layout';
-.rightsheet-container {
-  background-color: $white;
-  height: 100%;
-  overflow: auto;
+
+.logo {
+  height: 50px;
+  width: 155px;
+  cursor: pointer;
 }
-.title{
-  align-items: center;
+#main-nav {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $white;
+  z-index: 2;
+}
+.menu-items .item {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.selected-menu {
+  text-decoration: underline !important;
+}
+
+.sub-menu-items {
+  display: flex;
+  flex-direction: row;
+}
+.updated{
+  text-align: end;
+}
+
+.sub-menu-items .item {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.menu-items .item:hover,
+.sub-menu-items .item:hover {
+  text-decoration: underline;
+}
+
+.date-time {
+  display: flex;
+  flex-direction: column;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end
+}
+
+.icons .app-header-icon {
+  cursor: pointer;
 }
 hr{
-  border-top: 1px solid $black20;
+  background-color: $black20;
+  border: none;
+  height: 1px;
+  margin-bottom: 0.5px;
 }
-.non-expandable-menu .mat-expansion-panel-header.mat-expanded {
-  height: 48px;
+.mat-expansion-panel {
+  background: $black20;
 }
-::ng-deep .non-expandable-menu .mat-expansion-panel-body {
-  padding: 0 !important;
-}
-.mat-expansion-panel{
-  box-shadow: none;
-}
-.mat-expansion-panel-header{
-  padding: 4px;
-}
-@media screen and (min-width: $mobile_max_width) and (max-width: $tab_max_width) {
-  .logo-icon{
-    width: 200px;
+
+//mobile responsive
+@media screen and (max-width: 375px) {
+  .menu-items{
+    display: none;
+  }
+  .date-time-menu{
+    margin-right: 16px;
+  }
+  .container{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 12px;
+  }
+  .updated{
+    margin-right: 16px;
+    margin-top: -16px;
+  }
+  .sub-menu-items{
+    margin-left: 16px;
+  }
+  .icons .app-header-icon {
+    margin-right: 2px;
   }
 }
-@media screen and (max-width: $tab_min_width) {
-  .logo-icon{
-    width: 150px;
+
+// Tablet
+@media screen and (min-width:376px) and (max-width:768px){
+  .menu-items{
+    display: none;
+  }
+  .date-time-menu{
+    margin-right: 24px;
+  }
+  .container{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 32px;
+  }
+  .updated{
+    margin-right: 32px;
+    margin-top: -20px;
+  }
+  .app-header-icon{
+    margin-left: 10px;
+  }
+  .sub-menu-items{
+    margin-left: 32px;
+  }
+}
+
+// desktop
+@media screen and (min-width:769px){
+  .container {
+    display: grid;
+    grid-template-columns: min-content auto auto;
+    margin-left: 80px;
+  }
+  .date-time-menu{
+    margin-right: 80px;
+  }
+  .res-menu{
+    display: none;
+  }
+  .updated{
+    margin-right: 80px;
+    margin-top: -20px;
+  }
+  .app-header-icon{
+    margin-left: 10px;
+  }
+  .sub-menu-items{
+    margin-left: 80px;
   }
 }

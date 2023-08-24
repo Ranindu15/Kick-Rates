@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { MAT_LEGACY_DIALOG_DATA as MAT_DIALOG_DATA, MatLegacyDialog as MatDialog, MatLegacyDialogRef as MatDialogRef } from '@angular/material/legacy-dialog';
+import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { RouteManager } from '../../../core/utils/framework/route-manager.service';
 import { CONST } from '../../../core/utils/constant';
 import { MatRightSheet } from 'mat-right-sheet';
@@ -29,7 +29,7 @@ export class InvalidTokenDialogComponent implements OnInit {
     if (this.matRightSheet._openedRightSheetRef) {
       this.matRightSheet.dismiss();
     }
-    this.routerManager.navigate('MENU_ITEMS', '', null, [CONST.QUERY_PARAMS.PAGE, CONST.QUERY_PARAMS.JOURNEY]);
+    this.routerManager.navigate('LOGIN', '', null, [CONST.QUERY_PARAMS.PAGE, CONST.QUERY_PARAMS.JOURNEY]);
   }
 
 }

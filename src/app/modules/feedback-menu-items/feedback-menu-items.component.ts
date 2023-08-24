@@ -6,17 +6,16 @@ import {
   ItemsRankings
 } from '../../core/models/api/responses/menu-items';
 import { Subscription } from 'rxjs';
-import { DataKey, DataStore } from '../../core/utils/framework/data-store.service';
+import { DataStore } from '../../core/utils/framework/data-store.service';
 import { Spinner } from '../../core/utils/ui/spinner.service';
 import { ConfigLoader } from '../../core/utils/framework/config-loader.service';
 import { Snackbar } from '../../core/utils/ui/snackbar.service';
 import { RankingCommentsComponent } from './ranking-comments/ranking-comments.component';
-import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
-import { LegacyPageEvent as PageEvent } from '@angular/material/legacy-paginator';
+import { MatTableDataSource } from '@angular/material/table';
+import { PageEvent } from '@angular/material/paginator';
 import {
   CustomerFeedbackOrderDetailsComponent
 } from '../../shared/components/customer-feedback-order-details/customer-feedback-order-details.component';
-import { CustomerFeedback } from '../../core/models/api/responses/customer-feedback';
 import { CONST } from '../../core/utils/constant';
 import { FeedbackServiceHandler } from '../../core/services/service-handlers/feedback-service-handler';
 import { ModalService } from '../../core/utils/ui/modal.service';

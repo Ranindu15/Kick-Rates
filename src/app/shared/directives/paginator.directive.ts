@@ -8,11 +8,11 @@ import {
   Output,
   SimpleChanges
 } from '@angular/core';
-import {MatLegacyPaginator as MatPaginator, LegacyPageEvent as PageEvent} from '@angular/material/legacy-paginator';
+import {MatPaginator, PageEvent} from '@angular/material/paginator';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {RouteManager} from '../../core/utils/framework/route-manager.service';
 import {of} from 'rxjs';
-import {MatLegacyTableDataSource as MatTableDataSource} from '@angular/material/legacy-table';
+import {MatTableDataSource} from '@angular/material/table';
 import {CONST} from '../../core/utils/constant';
 import {ConfigLoader} from '../../core/utils/framework/config-loader.service';
 import {distinctUntilChanged, skip, switchMap} from 'rxjs/operators';
@@ -37,14 +37,14 @@ import {distinctUntilChanged, skip, switchMap} from 'rxjs/operators';
 })
 export class PaginatorDirective implements OnInit, OnChanges {
   @Output() pageStateChanged = new EventEmitter<PageEvent>();
-  @Input() pageIndex: number = 0;
-  @Input() pageSize: number = 10;
-  @Input() length: number = 10;
-  @Input() pageSizeOptions: number[] = [];
-  @Input() dataSource: MatTableDataSource<any> = new MatTableDataSource()
-  @Input() pageIndexParamString: string = 'rt'
-  @Input() pageSizeParamString: string = ''
-  @Input() disablePersistence: boolean = false
+  @Input() pageIndex: number;
+  @Input() pageSize: number;
+  @Input() length: number;
+  @Input() pageSizeOptions: number[];
+  @Input() dataSource: MatTableDataSource<any>;
+  @Input() pageIndexParamString: string
+  @Input() pageSizeParamString: string
+  @Input() disablePersistence: boolean
 
   @HostBinding('class.hidden')
   private get isHidden(): boolean {
