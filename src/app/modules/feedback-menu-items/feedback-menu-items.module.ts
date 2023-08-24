@@ -15,8 +15,6 @@ import { HttpParams } from '@angular/common/http';
 import { FeedbackMenuItemsComponent } from './feedback-menu-items.component';
 import { FeedbackMenuItemsRoutingModule } from './feedback-menu-items.routing.module';
 import { MAT_RIGHT_SHEET_DATA, MatRightSheet } from 'mat-right-sheet';
-import { DocumentGenerateService } from '../../core/services/document-generate.service';
-import { OrderServiceHandler } from '../../core/services/service-handlers/order-service-handler';
 import { MatMenuModule } from '@angular/material/menu';
 import { FeedbackServiceHandler } from '../../core/services/service-handlers/feedback-service-handler';
 import { RankingCommentsComponent } from './ranking-comments/ranking-comments.component';
@@ -25,6 +23,9 @@ import { MatListModule } from '@angular/material/list';
 import { ModalService } from '../../core/utils/ui/modal.service';
 import { MAT_BOTTOM_SHEET_DATA, MatBottomSheet } from '@angular/material/bottom-sheet';
 import { DynamicRenderer } from '../../core/utils/ui/dynamic-renderer.service';
+import {
+  CustomerFeedbackOrderDetailsComponent
+} from '../../shared/components/customer-feedback-order-details/customer-feedback-order-details.component';
 
 const materialModules = [
   MatTableModule,
